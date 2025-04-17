@@ -1,0 +1,1947 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Serif TC', serif; /* Formal Chinese font */
+    color: #ffffff; /* White text for dark theme */
+    background-color: #121212; /* Dark background */
+    line-height: 1.6;
+}
+
+/* Cover section styles */
+.cover {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background-image: url('cover/IMG_0504.heic'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Cover content container */
+.cover-content {
+    position: relative; /* Appears above overlay */
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Main title styles */
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+}
+
+/* Subtitle styles */
+.subtitle {
+    font-family: 'Tangerine',cursive; /* Handwritten font */
+    font-size: 1.3rem;            /* Larger to compensate for thin strokes */
+    font-weight: 700;            /* Bold for stronger cursive effect */
+  }
+
+/* Animation classes */
+.animate-fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.animate-slide-up {
+    animation: slideUp 1.5s ease-in-out;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* ===== ISOLATED STYLES (hayley- prefix prevents conflicts) ===== */
+
+/* Base Reset (only affects this page) */
+.hayley-about-page {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Background Container */
+.hayley-bg-container {
+    min-height: 100vh;
+    background-image: url('background/Screenshot\ 2025-04-15\ at\ 3.12.41\PM.png'); /* Replace with your image path*/
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Gray Header Section (Top 20%) */
+.hayley-header-section {
+    height: 20vh;
+    background-color: rgba(128, 128, 128, 0.8); /* Semi-transparent gray */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Title Styles */
+.hayley-main-title {
+    font-family: "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 4rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Bottom Split Section (80% height) */
+.hayley-split-section {
+    height: 80vh;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+}
+
+/* Photo Container (Left Half) */
+.hayley-photo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.hayley-profile-img {
+    max-height: 80%;
+    max-width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    object-fit: contain;
+    border: 3px solid white;
+}
+
+/* Text Container (Right Half) */
+.hayley-text-container {
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Highlight Text Styles */
+.hayley-highlight-text {
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+    font-size: 1.3rem; /* Larger font size */
+    line-height: 1.8;
+    margin-bottom: 1.8rem;
+    position: relative;
+    padding-left: 2.5rem;
+    color: #333;
+}
+
+.hayley-bullet {
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+    .hayley-main-title {
+        font-size: 3rem;
+    }
+    .hayley-highlight-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hayley-split-section {
+        flex-direction: column;
+        height: auto;
+    }
+    .hayley-photo-container {
+        padding: 2rem 2rem 0;
+    }
+    .hayley-text-container {
+        padding: 2rem;
+    }
+    .hayley-main-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* ===== ISOLATED STYLES (hayley- prefix) ===== */
+
+/* Base Reset (scoped to this page only) */
+.hayley-photo-page {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #000; /* Black background */
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Container Setup */
+.hayley-container {
+    padding: 0;
+    height: 100vh;
+}
+
+/* Left Column Styles */
+.hayley-left-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #000;
+}
+
+.hayley-image-wrapper {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hayley-bg-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(255,255,255,0.1);
+}
+
+/* Right Column Styles */
+.hayley-right-col {
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    background-color: #000;
+}
+
+.hayley-content-wrapper {
+    width: 100%;
+}
+
+/* Typography */
+.hayley-main-title {
+    font-family: "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(255,255,255,0.2);
+}
+
+.hayley-technique-point {
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #eee;
+}
+
+.hayley-tip {
+    font-family: "Times New Roman", serif;
+    font-size: 1.3rem;
+    color: #ffd700; /* Gold color */
+    margin-top: 2rem;
+}
+
+.hayley-emoji, .hayley-bulb {
+    margin-right: 0.5rem;
+    font-style: normal;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 992px) {
+    .hayley-container {
+        height: auto;
+    }
+    
+    .hayley-left-col, .hayley-right-col {
+        height: 50vh;
+    }
+    
+    .hayley-main-title {
+        font-size: 2rem;
+    }
+    
+    .hayley-technique-point {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hayley-main-title {
+        font-size: 1.8rem;
+    }
+    
+    .hayley-technique-point, .hayley-tip {
+        font-size: 1rem;
+    }
+}
+
+/* Set the background image for the page */
+body {
+    background-image: url('background/IMG_0510.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+/* Semi-transparent overlay for better text readability */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Main gallery container styling */
+.gallery-container {
+    padding: 40px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Gallery title styling */
+.gallery-title {
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Gallery row spacing */
+.gallery-row {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Gallery item styling with 3D effect */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+/* Image styling with shadow for 3D effect */
+.gallery-img {
+    width: 100%;
+    height: 300px; /* Fixed height for consistency */
+    object-fit: cover;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+}
+
+/* Image overlay for descriptions */
+.img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 0 0 5px 5px;
+}
+
+.gallery-item:hover .img-overlay {
+    height: 30%;
+}
+
+.img-description {
+    color: white;
+    padding: 15px;
+    margin: 0;
+}
+
+/* Animation classes */
+.animate-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeInLeft 1s ease forwards;
+}
+
+.animate-right {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: fadeInRight 1s ease forwards;
+}
+
+.animate-top {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInTop 1s ease forwards;
+}
+
+.animate-bottom {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInBottom 1s ease forwards;
+}
+
+/* Keyframe animations */
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInTop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInBottom {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery-img {
+        height: 200px;
+    }
+    
+    .gallery-item {
+        margin-bottom: 15px;
+    }
+    
+    /* Stack images on mobile */
+    .gallery-row .col-md-3, 
+    .gallery-row .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Macau Grand Prix Page - CSS */
+/* All styles are scoped within the .macau-grand-prix-container class to prevent affecting other pages */
+.macau-grand-prix-container {
+    /* Cool dark gray background with subtle pattern for design */
+    background-color: #2a2d34;
+    background-image: radial-gradient(circle at 10% 20%, #3a3f4b 0%, transparent 20%);
+    color: #e0e0e0;
+    min-height: 100vh;
+    padding: 2rem;
+    overflow-x: hidden;
+}
+
+.macau-grand-prix-container .background-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Left content area styles */
+.macau-grand-prix-container .left-content {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+}
+
+/* Main title with elegant cursive font (scoped to this page only) */
+.macau-grand-prix-container .main-title {
+    font-family: 'Brush Script MT', cursive, sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #f8f8f8;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.macau-grand-prix-container .main-title .arrow {
+    margin-left: 4.5rem;
+}
+
+/* Subtitle with stylish italic font */
+.macau-grand-prix-container .subtitle {
+    font-family: 'Garamond', 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #d1d1d1;
+    margin-top: 1.5rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+}
+
+.macau-grand-prix-container .description {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Right gallery area styles */
+.macau-grand-prix-container .right-gallery {
+    flex: 1;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.macau-grand-prix-container .top-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.macau-grand-prix-container .bottom-images {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.macau-grand-prix-container .left-image,
+.macau-grand-prix-container .right-image {
+    flex: 1;
+    aspect-ratio: 1/1;
+}
+
+/* Image styling with 3D effect */
+.macau-grand-prix-container .photo-3d {
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 
+                0 6px 6px rgba(0, 0, 0, 0.2),
+                inset 0 0 20px rgba(255, 255, 255, 0.1);
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.macau-grand-prix-container .photo-3d:hover {
+    transform: perspective(1000px) rotateY(5deg) rotateX(2deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 
+                0 10px 10px rgba(0, 0, 0, 0.3),
+                inset 0 0 30px rgba(255, 255, 255, 0.15);
+}
+
+/* Animation classes */
+.macau-grand-prix-container .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.macau-grand-prix-container .animate-slide-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.macau-grand-prix-container .animate-slide-right {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { 
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from { 
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .macau-grand-prix-container .background-container {
+        flex-direction: column;
+    }
+    
+    .macau-grand-prix-container .main-title {
+        font-size: 2rem;
+    }
+    
+    .macau-grand-prix-container .bottom-images {
+        flex-direction: column;
+    }
+    
+    .macau-grand-prix-container .left-image,
+    .macau-grand-prix-container .right-image {
+        aspect-ratio: 16/9;
+    }
+}
+
+/* Chengdu - Leshan Emei Mountain Page - CSS */
+/* All styles are scoped within .chengdu-emei-container to prevent affecting other pages */
+
+.chengdu-emei-container {
+    /* Sandy/light beige background with subtle texture */
+    background-color: #f5f5e6e6;
+    background-image: linear-gradient(to bottom, rgba(245,241,230,0.9), rgba(245,241,230,0.9)),
+                      url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 L100 0 L100 100 L0 100 Z" fill="none" stroke="%23d8d1c0" stroke-width="0.5" stroke-dasharray="5,5"/></svg>');
+    min-height: 100vh;
+    padding: 2rem;
+    overflow-x: hidden;
+}
+
+.chengdu-emei-container .background-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Left gallery area styles */
+.chengdu-emei-container .left-gallery {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+
+/* Image containers with offset design */
+.chengdu-emei-container .top-image {
+    width: 90%;
+    margin-right: auto;
+    aspect-ratio: 4/3;
+    z-index: 2;
+}
+
+.chengdu-emei-container .bottom-image {
+    width: 90%;
+    margin-left: auto;
+    aspect-ratio: 16/9;
+    margin-top: -1.8rem;
+    z-index: 1;
+}
+
+/* Right content area styles */
+.chengdu-emei-container .right-content {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+}
+
+/* Main title with elegant serif font (scoped to this page only) */
+.chengdu-emei-container .main-title {
+    font-family: 'Playfair Display', 'Times New Roman', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #3a3a3a;
+    margin-bottom: 2rem;
+    letter-spacing: 0.5px;
+}
+
+.chengdu-emei-container .main-title .arrow {
+    margin: 0 0.5rem;
+}
+
+/* Subtitle with stylish italic font */
+.chengdu-emei-container .subtitle {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #4a4a4a;
+    margin-top: 1.5rem;
+    border-bottom: 1px solid #d8d1c0;
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.3px;
+}
+
+.chengdu-emei-container .description {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 2rem;
+    line-height: 1.8;
+    color: #5a5a5a;
+    margin-bottom: 1.5rem;
+}
+
+.chengdu-emei-container .closing-text p {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #4a4a4a;
+    margin-top: 2rem;
+}
+
+/* Image styling with 3D effect */
+.chengdu-emei-container .photo-3d {
+    border-radius: 4px;
+    box-shadow: 8px 8px 16px rgba(0,0,0,0.1),
+                -4px -4px 8px rgba(255,255,255,0.8),
+                inset 2px 2px 4px rgba(255,255,255,0.3);
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.chengdu-emei-container .photo-3d:hover {
+    transform: perspective(1000px) rotateY(5deg) rotateX(2deg) scale(1.02);
+    box-shadow: 12px 12px 24px rgba(0,0,0,0.15),
+                -6px -6px 12px rgba(255,255,255,0.9),
+                inset 4px 4px 8px rgba(255,255,255,0.4);
+}
+
+/* Animation classes */
+.chengdu-emei-container .animate-wave {
+    animation: waveIn 1.2s ease-out forwards;
+}
+
+.chengdu-emei-container .animate-float-up {
+    animation: floatUp 1s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+@keyframes waveIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) rotate(-1deg);
+    }
+    60% {
+        transform: translateY(-5px) rotate(1deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+    }
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .chengdu-emei-container .main-title {
+        font-size: 2.2rem;
+    }
+    
+    .chengdu-emei-container .subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .chengdu-emei-container .background-container {
+        flex-direction: column;
+    }
+    
+    .chengdu-emei-container .left-gallery {
+        order: 2;
+        margin-top: 2rem;
+    }
+    
+    .chengdu-emei-container .right-content {
+        order: 1;
+    }
+    
+    .chengdu-emei-container .top-image,
+    .chengdu-emei-container .bottom-image {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .chengdu-emei-container .bottom-image {
+        margin-top: 1.5rem;
+    }
+}
+
+/* Image Gallery Page - CSS */
+/* All styles are scoped within .photo-gallery-container to prevent affecting other pages */
+
+.photo-gallery-container {
+    /* Gray-brown background with subtle texture */
+    background-color: #6b5b4d;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(107, 91, 77, 0.8) 0%, transparent 20%),
+        linear-gradient(to bottom, rgba(107, 91, 77, 0.9), rgba(107, 91, 77, 0.95));
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
+}
+
+.photo-gallery-container .gallery-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Gallery title styles */
+.photo-gallery-container .gallery-title {
+    font-family: 'Montserrat', 'Helvetica', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Gallery display area */
+.photo-gallery-container .gallery-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0 auto;
+    position: relative;
+    min-height: 60vh;
+}
+
+/* Navigation buttons */
+.photo-gallery-container .nav-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #ffffff;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.photo-gallery-container .nav-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.photo-gallery-container .nav-button:active {
+    transform: scale(0.95);
+}
+
+.photo-gallery-container .nav-button svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Image container styles */
+.photo-gallery-container .image-container {
+    flex-grow: 1;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.photo-gallery-container .current-image {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 3D photo effect */
+.photo-gallery-container .photo-3d {
+    border-radius: 4px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 15px 15px rgba(0, 0, 0, 0.2),
+        inset 0 0 30px rgba(255, 255, 255, 0.1);
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.photo-gallery-container .photo-3d:hover {
+    transform: perspective(1000px) rotateY(3deg) rotateX(1deg) scale(1.01);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.4),
+        0 20px 20px rgba(0, 0, 0, 0.3),
+        inset 0 0 40px rgba(255, 255, 255, 0.15);
+}
+
+/* Photo counter */
+.photo-gallery-container .photo-counter {
+    margin-top: 1.5rem;
+    font-family: 'Montserrat', 'Helvetica', sans-serif;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Animation classes */
+.photo-gallery-container .animate-fade {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Slide animations for JavaScript to use */
+.photo-gallery-container .slide-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.photo-gallery-container .slide-right {
+    animation: slideInRight 0.6s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+    from { 
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from { 
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .photo-gallery-container .gallery-title {
+        font-size: 2rem;
+    }
+    
+    .photo-gallery-container .gallery-display {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .photo-gallery-container .nav-button {
+        width: 50px;
+        height: 50px;
+        position: static;
+        margin: 1rem 0;
+    }
+    
+    .photo-gallery-container .image-container {
+        order: -1;
+    }
+}
+
+/* Chengdu Diechuan Distillery Page - CSS */
+/* All styles are scoped within .diechuan-distillery-container to prevent affecting other pages */
+
+.diechuan-distillery-container {
+    /* Black background with subtle design */
+    background-color: #000;
+    background-image: 
+        radial-gradient(circle at 75% 30%, rgba(40, 40, 40, 0.8) 0%, transparent 50%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95));
+    min-height: 100vh;
+    padding: 3rem 2rem;
+    color: #e0e0e0;
+    position: relative;
+    overflow: hidden;
+}
+
+.diechuan-distillery-container .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(135deg, rgba(20, 20, 20, 0.2) 0%, transparent 100%),
+        url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 L100 0 L100 100 L0 100 Z" fill="none" stroke="%23333" stroke-width="0.5" stroke-dasharray="2,2"/></svg>');
+    z-index: 0;
+}
+
+.diechuan-distillery-container .content-wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Artistic main title */
+.diechuan-distillery-container .main-title {
+    font-family: 'Cinzel', 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: #f8f8f8;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 10px rgba(200, 160, 100, 0.3);
+    letter-spacing: 1px;
+}
+
+.diechuan-distillery-container .main-title .arrow {
+    margin: 0 0.5rem;
+    display: inline-block;
+}
+
+/* Photo gallery section */
+.diechuan-distillery-container .photo-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto 3rem;
+    position: relative;
+}
+
+.diechuan-distillery-container .image-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    position: relative;
+}
+
+/* Overlapping effect for images */
+.diechuan-distillery-container .left-image {
+    transform: translateY(20px);
+    z-index: 1;
+}
+
+.diechuan-distillery-container .right-image {
+    transform: translateY(-20px);
+}
+
+/* 3D photo effect */
+.diechuan-distillery-container .photo-3d {
+    border-radius: 4px;
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.5),
+        0 10px 10px rgba(0, 0, 0, 0.4),
+        inset 0 0 20px rgba(200, 160, 100, 0.1);
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    border: 1px solid rgba(200, 160, 100, 0.2);
+}
+
+.diechuan-distillery-container .photo-3d:hover {
+    transform: perspective(1000px) rotateY(5deg) rotateX(2deg) scale(1.02);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.6),
+        0 15px 15px rgba(0, 0, 0, 0.5),
+        inset 0 0 30px rgba(200, 160, 100, 0.2);
+}
+
+/* Styled text content */
+.diechuan-distillery-container .text-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.diechuan-distillery-container .styled-text {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #d8d8d8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.diechuan-distillery-container .closing-text {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #f0f0f0;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Animation classes */
+.diechuan-distillery-container .animate-slide-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.diechuan-distillery-container .animate-slide-right {
+    animation: slideInRight 0.8s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+@keyframes slideInLeft {
+    from { 
+        opacity: 0;
+        transform: translateX(-50px) translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0) translateY(20px);
+    }
+}
+
+@keyframes slideInRight {
+    from { 
+        opacity: 0;
+        transform: translateX(50px) translateY(-20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0) translateY(-20px);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .diechuan-distillery-container .main-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .diechuan-distillery-container .photo-gallery {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .diechuan-distillery-container .left-image,
+    .diechuan-distillery-container .right-image {
+        transform: none !important;
+    }
+    
+    .diechuan-distillery-container .main-title {
+        font-size: 2rem;
+    }
+    
+    .diechuan-distillery-container .styled-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* Multimedia Gallery Page - CSS */
+/* All styles scoped to .multimedia-experience class only */
+
+.multimedia-experience {
+    /* Base black background */
+    background-color: #000;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated background texture */
+.multimedia-experience .bg-texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(50,50,50,0.1) 0%, transparent 25%),
+        linear-gradient(135deg, rgba(30,30,30,0.1) 0%, transparent 50%);
+    animation: texturePulse 12s infinite alternate;
+    z-index: 0;
+}
+
+/* Common row styling */
+.multimedia-experience .photo-row,
+.multimedia-experience .video-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Photo item styling */
+.multimedia-experience .photo-item {
+    flex: 1;
+    min-width: 200px;
+    max-width: calc(25% - 2rem);
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+/* 3D image effect */
+.multimedia-experience .img-3d {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: perspective(1000px) rotateY(0) rotateX(0) scale(1);
+    transition: all 0.4s ease;
+    box-shadow:
+        0 20px 30px rgba(0,0,0,0.5),
+        0 10px 10px rgba(0,0,0,0.4),
+        inset 0 0 20px rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.multimedia-experience .img-3d:hover {
+    transform: perspective(1000px) rotateY(5deg) rotateX(2deg) scale(1.03);
+    box-shadow:
+        0 25px 40px rgba(0,0,0,0.7),
+        0 15px 15px rgba(0,0,0,0.5),
+        inset 0 0 30px rgba(255,255,255,0.1);
+}
+
+/* Video row specific styling */
+.multimedia-experience .video-row {
+    margin: 4rem 0;
+}
+
+.multimedia-experience .video-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: calc(50% - 2rem);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.multimedia-experience .video-player {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #111;
+}
+
+/* Animation classes */
+.multimedia-experience .drop-anim {
+    animation: dropDown 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    opacity: 0;
+    transform: translateY(-100px);
+}
+
+.multimedia-experience .fade-anim {
+    animation: fadeIn 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+.multimedia-experience .wave-anim {
+    animation: waveIn 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+/* Animation delays */
+.multimedia-experience .delay-1 { animation-delay: 0.2s; }
+.multimedia-experience .delay-2 { animation-delay: 0.4s; }
+.multimedia-experience .delay-3 { animation-delay: 0.6s; }
+.multimedia-experience .delay-4 { animation-delay: 0.8s; }
+
+/* Keyframe animations */
+@keyframes dropDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes waveIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) rotate(-2deg);
+    }
+    60% {
+        transform: translateY(-5px) rotate(2deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+    }
+}
+
+@keyframes texturePulse {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.7; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .multimedia-experience .photo-item {
+        max-width: calc(33.333% - 2rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .multimedia-experience {
+        padding: 2rem 1rem;
+    }
+    
+    .multimedia-experience .photo-item,
+    .multimedia-experience .video-container {
+        max-width: calc(50% - 1rem);
+        min-width: 150px;
+    }
+    
+    .multimedia-experience .photo-row,
+    .multimedia-experience .video-row {
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .multimedia-experience .photo-item,
+    .multimedia-experience .video-container {
+        max-width: 100%;
+    }
+}
+
+/* Nanjing Page - CSS */
+/* All styles scoped to .nanjing-hotel-container only */
+
+.nanjing-hotel-container {
+    position: relative;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    overflow: hidden;
+    color: #f0e6d2;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Dark red gradient background */
+.nanjing-hotel-container .page-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #3a0a0a 0%, #5c1a1a 50%, #3a0a0a 100%);
+    background-size: 200% 200%;
+    animation: gradientPulse 15s ease infinite;
+    z-index: -1;
+}
+
+/* Content wrapper */
+.nanjing-hotel-container .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Artistic title styling */
+.nanjing-hotel-container .artistic-title {
+    font-family: 'Cinzel Decorative', 'Times New Roman', serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #e8d8b5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+.nanjing-hotel-container .artistic-title .arrow {
+    margin: 0 0.5rem;
+    display: inline-block;
+}
+
+/* Photo gallery layout */
+.nanjing-hotel-container .photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Individual photo items with varying heights */
+.nanjing-hotel-container .photo-item {
+    flex: 1;
+    min-width: 200px;
+    max-width: calc(25% - 2rem);
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+/* First photo slightly taller */
+.nanjing-hotel-container .photo-item:nth-child(1) {
+    transform: translateY(-10px);
+}
+
+/* Second photo standard height */
+.nanjing-hotel-container .photo-item:nth-child(2) {
+    transform: translateY(5px);
+}
+
+/* Third photo standard height */
+.nanjing-hotel-container .photo-item:nth-child(3) {
+    transform: translateY(10px);
+}
+
+/* Fourth photo slightly taller */
+.nanjing-hotel-container .photo-item:nth-child(4) {
+    transform: translateY(-5px);
+}
+
+/* Styled photo with 3D effect */
+.nanjing-hotel-container .styled-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: perspective(1000px) rotateY(0) rotateX(0) scale(1);
+    transition: all 0.4s ease;
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.6),
+        0 10px 10px rgba(0, 0, 0, 0.4),
+        inset 0 0 20px rgba(232, 216, 181, 0.1);
+    border: 1px solid rgba(232, 216, 181, 0.2);
+    filter: sepia(0.2) contrast(1.1);
+}
+
+.nanjing-hotel-container .styled-photo:hover {
+    transform: perspective(1000px) rotateY(5deg) rotateX(2deg) scale(1.03);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.8),
+        0 15px 15px rgba(0, 0, 0, 0.6),
+        inset 0 0 30px rgba(232, 216, 181, 0.2);
+    filter: sepia(0.3) contrast(1.2);
+}
+
+/* Styled text content */
+.nanjing-hotel-container .text-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.nanjing-hotel-container .styled-paragraph {
+    font-family: 'Marcellus', 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #e8d8b5;
+    text-align: justify;
+}
+
+/* Animation classes */
+.nanjing-hotel-container .animate-slide {
+    animation: slideUp 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Animation delays */
+.nanjing-hotel-container .delay-1 { animation-delay: 0.2s; }
+.nanjing-hotel-container .delay-2 { animation-delay: 0.4s; }
+.nanjing-hotel-container .delay-3 { animation-delay: 0.6s; }
+.nanjing-hotel-container .delay-4 { animation-delay: 0.8s; }
+
+/* Keyframe animations */
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientPulse {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .nanjing-hotel-container .photo-item {
+        max-width: calc(50% - 2rem);
+    }
+    
+    .nanjing-hotel-container .artistic-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nanjing-hotel-container {
+        padding: 3rem 1rem;
+    }
+    
+    .nanjing-hotel-container .photo-item {
+        max-width: 100%;
+        transform: none !important;
+    }
+    
+    .nanjing-hotel-container .artistic-title {
+        font-size: 2rem;
+    }
+    
+    .nanjing-hotel-container .styled-paragraph {
+        font-size: 1.1rem;
+    }
+}
+
+/* Japan & Thailand Page - CSS */
+/* All styles scoped to .japan-thai-container */
+
+.japan-thai-container {
+    /* Base styling */
+    position: relative;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    overflow-x: hidden;
+    color: #f0f0f0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Dark green gradient background */
+.japan-thai-container .page-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0a2a1a 0%, #1a3a2a 50%, #0a2a1a 100%);
+    background-size: 200% 200%;
+    animation: gradientPulse 15s ease infinite;
+    z-index: -1;
+}
+
+/* Location section styling */
+.japan-thai-container .location-section {
+    max-width: 1200px;
+    margin: 0 auto 5rem;
+}
+
+.japan-thai-container .thai-section {
+    margin-top: 6rem;
+}
+
+/* Location title */
+.japan-thai-container .location-title {
+    font-family: 'Playfair Display', 'Times New Roman', serif;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #e8e0b5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.japan-thai-container .location-title .arrow {
+    margin: 0 0.5rem;
+}
+
+/* Video wrapper */
+.japan-thai-container .video-wrapper {
+    width: 100%;
+    margin: 0 auto 3rem;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.japan-thai-container .main-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #000;
+}
+
+/* Description text */
+.japan-thai-container .description-text {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+}
+
+.japan-thai-container .description-text p {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: #e0d8b0;
+}
+
+/* Photo grid */
+.japan-thai-container .photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+/* Photo item */
+.japan-thai-container .photo-item {
+    flex: 1;
+    min-width: 200px;
+    max-width: calc(25% - 2rem);
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+/* Varying heights for visual interest */
+.japan-thai-container .photo-item:nth-child(1) { transform: translateY(-15px); }
+.japan-thai-container .photo-item:nth-child(2) { transform: translateY(10px); }
+.japan-thai-container .photo-item:nth-child(3) { transform: translateY(5px); }
+.japan-thai-container .photo-item:nth-child(4) { transform: translateY(-10px); }
+
+/* Styled photo with 3D effect */
+.japan-thai-container .styled-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: perspective(1000px) rotateY(0) rotateX(0) scale(1);
+    transition: all 0.4s ease;
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.5),
+        0 10px 10px rgba(0, 0, 0, 0.4),
+        inset 0 0 20px rgba(200, 200, 150, 0.1);
+    border: 1px solid rgba(200, 200, 150, 0.2);
+    filter: brightness(0.95) contrast(1.05);
+}
+
+.japan-thai-container .styled-photo:hover {
+    transform: perspective(1000px) rotateY(5deg) rotateX(2deg) scale(1.03);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.7),
+        0 15px 15px rgba(0, 0, 0, 0.5),
+        inset 0 0 30px rgba(200, 200, 150, 0.2);
+    filter: brightness(1) contrast(1.1);
+}
+
+/* Animation classes */
+.japan-thai-container .animate-fade {
+    animation: fadeIn 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+.japan-thai-container .animate-slide-left {
+    animation: slideLeft 1s ease-out forwards;
+    opacity: 0;
+}
+
+.japan-thai-container .animate-slide-up {
+    animation: slideUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+.japan-thai-container .animate-slide-right {
+    animation: slideRight 1s ease-out forwards;
+    opacity: 0;
+}
+
+.japan-thai-container .animate-drop {
+    animation: dropDown 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    opacity: 0;
+    transform: translateY(-100px);
+}
+
+/* Animation delays */
+.japan-thai-container .delay-1 { animation-delay: 0.2s; }
+.japan-thai-container .delay-2 { animation-delay: 0.4s; }
+.japan-thai-container .delay-3 { animation-delay: 0.6s; }
+.japan-thai-container .delay-4 { animation-delay: 0.8s; }
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes slideLeft {
+    from { transform: translateX(-50px); }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+    from { transform: translateX(50px); }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes dropDown {
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes gradientPulse {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .japan-thai-container .photo-item {
+        max-width: calc(33.333% - 2rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .japan-thai-container {
+        padding: 3rem 1rem;
+    }
+    
+    .japan-thai-container .location-title {
+        font-size: 2.2rem;
+    }
+    
+    .japan-thai-container .photo-item {
+        max-width: calc(50% - 1rem);
+    }
+    
+    .japan-thai-container .description-text p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .japan-thai-container .photo-item {
+        max-width: 100%;
+        transform: none !important;
+    }
+    
+    .japan-thai-container .location-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Travel Diary Conclusion Page - CSS */
+/* All styles scoped to .travel-conclusion-container */
+
+.travel-conclusion-container {
+    /* Base styling */
+    position: relative;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Background image with high transparency */
+.travel-conclusion-container .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15; /* High transparency */
+    z-index: -1;
+}
+
+/* Content wrapper */
+.travel-conclusion-container .content-wrapper {
+    max-width: 900px;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Main title */
+.travel-conclusion-container .main-title {
+    font-family: 'Playfair Display', 'Times New Roman', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #f2f2f2;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Main text content */
+.travel-conclusion-container .main-text {
+    margin: 4rem auto;
+    max-width: 700px;
+}
+
+.travel-conclusion-container .main-text p {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #f3f3f3;
+    margin-bottom: 2rem;
+}
+
+/* Closing statements */
+.travel-conclusion-container .closing-statements {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.travel-conclusion-container .closing-line {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #f2eded;
+    letter-spacing: 0.5px;
+}
+
+.travel-conclusion-container .signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-top: 2rem;
+}
+
+/* Animation for subtle fade-in */
+.travel-conclusion-container .content-wrapper {
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .travel-conclusion-container .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .travel-conclusion-container .main-text p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .travel-conclusion-container {
+        padding: 3rem 1rem;
+    }
+    
+    .travel-conclusion-container .main-title {
+        font-size: 2rem;
+    }
+    
+    .travel-conclusion-container .main-text {
+        margin: 3rem auto;
+    }
+    
+    .travel-conclusion-container .main-text p {
+        font-size: 1.2rem;
+    }
+    
+    .travel-conclusion-container .closing-line {
+        font-size: 1.2rem;
+    }
+    
+    .travel-conclusion-container .signature {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .travel-conclusion-container .main-title {
+        font-size: 1.8rem;
+    }
+    
+    .travel-conclusion-container .main-text p {
+        font-size: 1.1rem;
+    }
+    
+    .travel-conclusion-container .closing-statements {
+        margin-top: 3rem;
+    }
+}
